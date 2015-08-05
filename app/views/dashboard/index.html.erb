@@ -2,24 +2,32 @@
   <div class="large-6 columns">
     <h1>Twitter</h1>
     <hr>
-    <h3>Outgoing</h3>
+    <!-- <h3>Outgoing</h3>
 
     <% @outgoing.each do |tweet| %>
       <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
       <br>
     <% end %>
 
-    <hr>
+    <hr> -->
 
     <h3>Incoming</h3>
     <% @incoming.each do |tweet| %>
       <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
-      <br>
+      <br><br>
     <% end %>
   </div>
 
   <div class="large-6 columns">
     <h1>StackOverflow</h1>
     <hr>
+    <h3>References</h3>
+    <% @references.each do |ref| %>
+      <h5><%= ref["title"] %></h5>
+      <%= ref["body"][0..250] %>
+      <br>
+      <%= link_to("http://stackoverflow.com/questions/#{ref["question_id"]}") do "link" end %>
+      <br><br>
+    <% end %>
   </div>
 </div>
