@@ -1,14 +1,25 @@
-<h1>Outgoing</h1>
+<div class="row">
+  <div class="large-6 columns">
+    <h1>Twitter</h1>
+    <hr>
+    <h3>Outgoing</h3>
 
-<% @outgoing.each do |tweet| %>
-  <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
-  <br>
-<% end %>
+    <% @outgoing.each do |tweet| %>
+      <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
+      <br>
+    <% end %>
 
-<hr>
+    <hr>
 
-<h1>Incoming</h1>
-<% @incoming.each do |tweet| %>
-  <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
-  <br>
-<% end %>
+    <h3>Incoming</h3>
+    <% @incoming.each do |tweet| %>
+      <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
+      <br>
+    <% end %>
+  </div>
+
+  <div class="large-6 columns">
+    <h1>StackOverflow</h1>
+    <hr>
+  </div>
+</div>
