@@ -27,6 +27,9 @@ gem 'foundation-icons-sass-rails'
 #faraday
 gem 'faraday'
 
+#Twitter
+gem 'twitter'
+
 group :production do
   #heroku gem
   gem 'rails_12factor'
@@ -36,7 +39,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
-  
+
   gem 'dotenv-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views

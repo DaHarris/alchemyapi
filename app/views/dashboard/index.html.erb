@@ -1,0 +1,14 @@
+<h1>Outgoing</h1>
+
+<% @outgoing.each do |tweet| %>
+  <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
+  <br>
+<% end %>
+
+<hr>
+
+<h1>Incoming</h1>
+<% @incoming.each do |tweet| %>
+  <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
+  <br>
+<% end %>
