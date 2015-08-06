@@ -7,13 +7,13 @@ class Sentiment
     end
   end
 
-  def get
+  def get(input)
     response = @conn.get do |request|
       request.url '/calls/text/TextGetTextSentiment'
       request.params['apikey'] = ENV["ALCHEMYAPI_KEY"]
       request.params['outputMode'] = 'json'
-      request.params['text'] = 'hah'
+      request.params['text'] = input
     end
-    return JSON.parse(response.body)['docSentiment']
+    return JSON.parse(response.body)['docSentiment']['score']
   end
 end

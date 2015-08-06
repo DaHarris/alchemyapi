@@ -15,6 +15,6 @@ class StackFetcher
       request.params['q'] = 'alchemyapi'
       request.params['site'] = 'stackoverflow'
     end
-    return JSON.parse(response.body)["items"]
+    return JSON.parse(response.body)["items"].take(10)
   end
 end
