@@ -26,6 +26,8 @@ gem 'foundation-icons-sass-rails'
 
 #faraday
 gem 'faraday'
+#use excon adapter for alchemyapi services
+gem 'excon'
 
 #Twitter
 gem 'twitter'
