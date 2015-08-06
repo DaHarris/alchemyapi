@@ -1,1 +1,9 @@
 @import "foundation_and_overrides";
+
+.tweet {
+  transition:all 1s ease;
+  -webkit-transition-delay:all 1s ease;
+  -moz-transition-delay:all 1s ease;
+  -ms-transition-delay:all 1s ease;
+  -o-transition-delay:all 1s ease;
+}

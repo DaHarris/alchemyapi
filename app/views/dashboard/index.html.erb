@@ -1,32 +1,30 @@
 <div class="row">
-  <div class="large-6 columns">
+
+  <div class="large-3 columns">
+    <h3 id="options">Get Sentiment Analysis</h3>
+  </div>
+
+  <div class="large-4 columns">
     <h1>Twitter</h1>
     <hr>
-    <!-- <h3>Outgoing</h3>
-
-    <% @outgoing.each do |tweet| %>
-      <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
-      <br>
-    <% end %>
-
-    <hr> -->
-
-    <h3>Incoming</h3>
     <% @incoming.each do |tweet| %>
-      <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
+      <div class="tweet">
+        <%= "#{tweet.user.screen_name}: #{tweet.text}"%>
+      </div>
       <br><br>
     <% end %>
   </div>
 
-  <div class="large-6 columns">
+  <div class="large-4 columns">
     <h1>StackOverflow</h1>
     <hr>
-    <h3>References</h3>
     <% @references.each do |ref| %>
-      <h5><%= ref["title"] %></h5>
-      <%= ref["body"][0..250] %>
-      <br>
-      <%= link_to("https://stackoverflow.com/questions/#{ref["question_id"]}") do "link" end %>
+      <div class="stack">
+        <h5><%= ref["title"] %></h5>
+        <%= ref["body"][0..250] %>
+        <br>
+        <%= link_to("https://stackoverflow.com/questions/#{ref["question_id"]}") do "link" end %>
+      </div>
       <br><br>
     <% end %>
   </div>
