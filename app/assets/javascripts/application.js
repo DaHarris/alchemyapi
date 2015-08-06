@@ -15,6 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require sentiment
+//= require keywords
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

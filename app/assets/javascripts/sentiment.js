@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#options').on('click', function() {
+  $('#sentiment').on('click', function() {
     var inputs = $('.tweet, .stack');
     $.each(inputs, function(index, value) {
       text = $(this).text();
