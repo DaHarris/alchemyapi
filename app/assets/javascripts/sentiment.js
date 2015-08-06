@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
   $('#options').on('click', function() {
-    var tweets = $('.tweet');
-    $.each(tweets, function(index, value) {
+    var inputs = $('.tweet, .stack');
+    $.each(inputs, function(index, value) {
       text = $(this).text();
       $.ajax({
-        url: "/api",
+        url: "/api/getSentiment",
         data: {text: text}
       }).success(function(value) {
         var div = $("div:contains(" + value['text']+ ")").last();

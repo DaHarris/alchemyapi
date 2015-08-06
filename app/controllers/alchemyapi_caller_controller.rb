@@ -1,8 +1,8 @@
 class AlchemyapiCallerController < ApplicationController
 
-  def get
+  def getSentiment
     input = params['text']
-    analyzer = Sentiment.new
+    analyzer = Alchemyapi::Sentiment.new
     render json: { score: analyzer.get(input), text: input }
   end
 end
