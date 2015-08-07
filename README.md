@@ -1,4 +1,4 @@
-# alchemyapi
+# AlchemyAPI Dashboard (Crafting Station)
 
 [Visit Site!](http://transmutate.herokuapp.com)
 
@@ -26,4 +26,4 @@ Had to switch to the Excon adapter to correctly receive data. Research suggests 
 the server could be returning a 'malformed compressed response' and the Net::HTTP is having trouble
 decompressing the data. Unsure without more in depth testing.
 
-[More Info:](https://github.com/jaimeiniesta/metainspector/issues/125)
+[More Info](https://github.com/jaimeiniesta/metainspector/issues/125)
